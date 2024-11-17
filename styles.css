@@ -112,7 +112,7 @@ section p {
 }
 
 #workouts h4 {
-    font-size: 45px;
+    font-size: 30px;
     color: #545e89;
     margin-top: 20px;
     margin-bottom: 15px;
@@ -129,7 +129,7 @@ section p {
     padding: px 0; 
     margin-bottom: 5px;
     border-radius: 0; 
-    font-size: 30px;
+    font-size: 20px;
     color: #ecf0f1; 
     position: relative;
     list-style-position: outside; 
@@ -220,6 +220,7 @@ section p {
 
 /* Footer Styles */
 footer {
+    font-family: "Roboto", Fantasy ;
     background-color: #333;
     color: #fff;
     padding: 20px;
