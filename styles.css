@@ -255,6 +255,137 @@ footer {
     text-align: center;
 }
 
+/* Sets */
+h2 {
+    font-size: 2.5em; /* Large and prominent heading */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center-align the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #fff; /* White text for dark background */
+}
+
+h4 {
+    font-size: 2.5em; /* Large and prominent heading */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center-align the heading */
+    margin-bottom: 5px; /* Space below the heading */
+    color: #fff; /* White text for dark background */
+}
+
+p {
+    font-size: 2.0em; /* Larger font for readability */
+    line-height: 1.6; /* Line spacing for readability */
+    text-align: center; /* Center-align text */
+    color: #ccc; /* Light gray text */
+    margin-bottom: 20px; /* Space below the text */
+    max-width: 800px; /* Limit width for better appearance */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto;
+}
+
+/* Buttons: General Styles */
+button {
+    font-weight: 700; /* Bold text */
+    color: #fff; /* White text */
+    border: 2px solid #fff; /* Visible border */
+    padding: 15px 30px; /* Adjust padding for size */
+    font-size: 18px; /* Font size for readability */
+    background-color: transparent; /* Transparent background */
+    transition: all 0.3s ease-in-out; /* Smooth transitions */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: relative; /* For pseudo-element effects */
+    text-align: center; /* Center-align button text */
+    overflow: hidden; /* Clip pseudo-element effects */
+    margin: 10px; /* Add spacing between buttons */
+    border-radius: 5px; /* Rounded corners */
+    z-index: 1; /* Ensure text stays above pseudo-element */
+}
+
+button:hover {
+    color: #121212; /* Change text color on hover */
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #fff;
+    z-index: -1; /* Place behind text */
+    transition: width 0.3s ease-in-out; /* Smooth sliding effect */
+}
+
+button:hover::before {
+    width: 100%; /* Fill the button on hover */
+}
+
+/* Stopwatch Section */
+#stopwatch {
+    padding: 40px 20px; /* Add padding around the section */
+    text-align: center; /* Center-align content */
+}
+
+#stopwatch h2 {
+    font-size: 3em; /* Larger heading */
+    font-weight: bold; /* Bold heading */
+    margin-bottom: 20px; /* Space below heading */
+    color: #fff;
+}
+
+#stopwatch p {
+    font-size: 1.5em; /* Slightly larger text */
+    margin-bottom: 30px; /* Add spacing below paragraph */
+    color: #ccc; /* Light gray text */
+}
+
+#stopwatch .sw-container {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack timer above buttons */
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    height: 40vh; /* Adjust height for visual balance */
+}
+
+#stopwatch .sw-container .time {
+    font-size: 3em; /* Increase timer size */
+    font-weight: bold; /* Make the timer bold */
+    margin-bottom: 20px; /* Add spacing below the timer */
+    color: #fff; /* White text for visibility */
+}
+
+#stopwatch .sw-container .buttons {
+    display: flex; /* Align buttons horizontally */
+    gap: 20px; /* Space between buttons */
+}
+
+/* Split Buttons for Workout Tracking */
+#track .split-buttons {
+    display: flex; /* Align buttons horizontally */
+    justify-content: center; /* Center-align buttons */
+    gap: 20px; /* Space between buttons */
+    margin: 20px 0; /* Space above and below buttons */
+}
+
+#track .split-buttons button {
+    font-size: 1.2em; /* Slightly larger text for split buttons */
+    padding: 15px 20px; /* Adjust padding */
+    border-radius: 10px; /* Rounded corners for a modern look */
+}
+
+/* Workout Details */
+#workoutContainer {
+    font-size: 1.2em; /* Font size for workout details */
+    line-height: 1.8; /* Line spacing for readability */
+    text-align: center; /* Center-align workout text */
+    color: #fff; /* Ensure text is visible */
+    padding: 10px 20px; /* Add padding for better readability */
+}
+
+
+
+
 /* Optional Media Query for Larger Screens */
 @media (min-width: 1700px) {
     main .sw-container {
