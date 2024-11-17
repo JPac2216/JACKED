@@ -68,16 +68,23 @@ window.onload = function () {
 
     // rep JS code 
     let reps = 0;
+    let repDisplay = document.querySelector('#repCount');
+    let resetRepsBtn = document.querySelector('#resetReps');
+
+
+    const updateRepDisplay = () => {
+        repDisplay.innerText = reps;
+    };
+
     document.querySelector('#addRep').onclick = () => {
         reps++;
-        document.querySelector('#repCount').innerText = reps;
+        updateRepDisplay();
     };
 
     // resetRepsButton
-    let resetRepsBtn = document.querySelector('#resetReps');
-    
     resetRepsBtn.onclick = () => {
         reps = 0;
+        updateRepDisplay();
     };
 
 
