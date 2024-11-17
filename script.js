@@ -129,9 +129,9 @@ const renderWorkouts = (splitName) => {
         addWorkoutBtn.onclick = () => {
             muscleData.workouts++; // Increment workouts
             muscleData.sets = 0; // Reset sets
-            document.querySelector(`#${splitName}-${muscle}-totalSets`).innerText = `Total Sets: ${muscleData.totalSets}`; // udates total sets
             document.querySelector(`#${splitName}-${muscle}-workouts`).innerText = `Exercise: ${muscleData.workouts}`;
             document.querySelector(`#${splitName}-${muscle}-sets`).innerText = `Sets: ${muscleData.sets}`;
+            document.querySelector(`#${splitName}-${muscle}-totalSets`).innerText = `Total Sets: ${muscleData.totalSets}`; // udates total sets
         };
 
         // Display totalSet count
