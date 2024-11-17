@@ -104,28 +104,16 @@ section p {
     font-size: 28px;
     text-decoration: underline;
     text-align: center;
-    color: #7dfff6;
+    color: #545e89;
     margin-top: 30px;
     margin-bottom: 20px;
 }
 
 #workouts h4 {
     font-size: 24px;
-    color: #d512f3;
+    color: #545e89;
     margin-top: 20px;
     margin-bottom: 15px;
-}
-
-.push-title {
-    color: #d512f3;
-}
-
-.chest-title {
-    color: #d512f3;
-}
-
-.triceps-title {
-    color: #d512f3;
 }
 
 #workouts ul {
