@@ -93,28 +93,28 @@ section p {
 
 #workouts h3 {
     font-size: 28px;
-    color: #f39c12;
+    color: #d512f3;
     margin-top: 30px;
     margin-bottom: 20px;
 }
 
 #workouts h4 {
     font-size: 24px;
-    color: #e67e22;
+    color: #d512f3;
     margin-top: 20px;
     margin-bottom: 15px;
 }
 
 .push-title {
-    color: #f39c12;
+    color: #d512f3;
 }
 
 .chest-title {
-    color: #e74c3c;
+    color: #d512f3;
 }
 
 .triceps-title {
-    color: #9b59b6;
+    color: #d512f3;
 }
 
 #workouts ul {
