@@ -65,25 +65,25 @@ window.onload = function () {
         appendMinutes.innerHTML = '00'; 
     };
 
-
+    renderWorkouts('push');
 };
 
 // Define workout splits
 const splits = {
     push: {
-        chest: { sets: 0, workouts: 0 },
-        triceps: { sets: 0, workouts: 0 },
-        shoulders: { sets: 0, workouts: 0 },
+        chest: { sets: 0, workouts: 0, totalSets: 0 },
+        triceps: { sets: 0, workouts: 0, totalSets: 0 },
+        shoulders: { sets: 0, workouts: 0, totalSets: 0 },
     },
     pull: {
-        back: { sets: 0, workouts: 0 },
-        biceps: { sets: 0, workouts: 0 },
-        delts: { sets: 0, workouts: 0 },
+        back: { sets: 0, workouts: 0, totalSets: 0 },
+        biceps: { sets: 0, workouts: 0, totalSets: 0 },
+        delts: { sets: 0, workouts: 0, totalSets: 0 },
     },
     legs: {
-        quads: { sets: 0, workouts: 0 },
-        hamstrings: { sets: 0, workouts: 0 },
-        calves: { sets: 0, workouts: 0 },
+        quads: { sets: 0, workouts: 0, totalSets: 0 },
+        hamstrings: { sets: 0, workouts: 0, totalSets: 0 },
+        calves: { sets: 0, workouts: 0, totalSets: 0 },
     },
 };
 
@@ -119,6 +119,7 @@ const renderWorkouts = (splitName) => {
         addSetBtn.innerText = `Add Set`;
         addSetBtn.onclick = () => {
             muscleData.sets++; // Increment sets
+            muscleData.totalSets++; // Increments totalSets without updating
             document.querySelector(`#${splitName}-${muscle}-sets`).innerText = `Sets: ${muscleData.sets}`;
         };
 
@@ -128,9 +129,15 @@ const renderWorkouts = (splitName) => {
         addWorkoutBtn.onclick = () => {
             muscleData.workouts++; // Increment workouts
             muscleData.sets = 0; // Reset sets
+            document.querySelector(`#${splitName}-${muscle}-totalSets`).innerText = `Total Sets: ${muscleData.totalSets}`; // udates total sets
             document.querySelector(`#${splitName}-${muscle}-workouts`).innerText = `Exercise: ${muscleData.workouts}`;
             document.querySelector(`#${splitName}-${muscle}-sets`).innerText = `Sets: ${muscleData.sets}`;
         };
+
+        // Display totalSet count
+        const totalSetCount = document.createElement('p');
+        totalSetCount.id = `${splitName}-${muscle}-totalSets`;
+        totalSetCount.innerText = `Total Sets: ${muscleData.totalSets}`;
 
         
 
@@ -147,10 +154,7 @@ const renderWorkouts = (splitName) => {
     });
 };
 
-// Initialize the UI with default split
-window.onload = () => {
-    renderWorkouts('push'); // Render Push split by default
-};
+
 
 // Switch between splits
 const switchSplit = (splitName) => {
