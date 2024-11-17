@@ -6,8 +6,8 @@
         let tens = 00;
 
         let appendMinutes = document.querySelector('#minutes');
-        let appendMinutes = document.querySelector('#tens');
-        let appendMinutes = document.querySelector('#seconds');
+        let appendTens = document.querySelector('#tens');
+        let appendSeconds = document.querySelector('#seconds');
 
         let startBtn = document.querySelector('#start');
         let stopBtn = document.querySelector('#stop');
@@ -17,11 +17,11 @@
         let Interval;
         const startTimer = () => {
             tens++; 
-            if(tens <= 9){
+            if (tens <= 9){
                 appendTens.innerHTML = '0' + tens;
             }
 
-            if(tens > 9){
+            if (tens > 9){
                 appendTens.innerHTML = tens;
             }
 
@@ -32,11 +32,11 @@
                 appendTens.innerHTML = '0' + 0;
             }
 
-            if(seconds > 9){
+            if (seconds > 9){
                 appendSeconds.innerHTML = seconds;
             }
 
-            if(seconds > 59){
+            if  (seconds > 59){
                 minutes++;
                 appendMinutes.innerHTML = '0' + minutes;
                 seconds = 0;
