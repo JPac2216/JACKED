@@ -53,6 +53,9 @@ window.onload = function () {
 
     stopBtn.onclick = () => {
         clearInterval(Interval);
+        appendTens.innerHTML = tens;
+        appendSeconds.innerHTML = seconds;
+        appendMinutes.innerHTML = minutes; 
     };
 
     resetBtn.onclick = () => {
