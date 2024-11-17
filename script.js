@@ -52,7 +52,7 @@
             Interval = setInterval(startTimer, 10);
         };
 
-        stopBTN.onclick = () => {
+        stopBtn.onclick = () => {
             clearInterval(Interval);
         };
 
