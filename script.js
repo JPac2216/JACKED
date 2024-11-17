@@ -148,6 +148,7 @@ const renderWorkouts = (splitName) => {
         workoutDiv.appendChild(workoutCount);
         workoutDiv.appendChild(addSetBtn);
         workoutDiv.appendChild(addWorkoutBtn);
+        workoutDiv.appendChild(totalSetCount);
 
         // Add to container
         container.appendChild(workoutDiv);
