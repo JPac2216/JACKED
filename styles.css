@@ -1,70 +1,36 @@
-/* Default CSS */
-*{
+/* Reset and Base Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  html {
+}
+
+html {
     scroll-behavior: smooth;
     scroll-padding-top: 75px;
-  }
-  
-  body{
-    font-weight: 400;
-    overflow-x: hidden;
-    position: relative;
-    background-color: #121212 !important;
-    color: #fff !important;
-    font-family: 'Centra', sans-serif !important;
-  }
-  
-  h1, h2{
-    margin: 0;
-    padding: 0;
-    line-height: normal;
-  
-  }
-  
-  p, a, li, button, ul {
-    margin: 0;
-    padding: 0;
-    line-height: normal;
-    text-decoration: none;
-  }
+}
 
-  img {
+body {
+    font-weight: 400;
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Centra', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+img {
     width: 100%;
     height: auto;
-  }
-  
-  input:focus, textarea:focus, select:focus {
-    outline: none;
-  }
-  
-  @media (min-width:1700px) {
-      main .container {
-          max-width: 100%;
-          padding: 0 150px;
-      }
-  }
-  
-  p.success {
-      color: green;
-  }
-  
-  p.danger {
-      color: red;
-  }
+}
 
-  /*Header*/
-  header {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Align to the top */
-    height: auto; 
-    padding: 20px 0;
-    text-align: center;
+input:focus, textarea:focus, select:focus {
+    outline: none;
 }
 
 /* Navbar Styles */
@@ -91,34 +57,93 @@ nav.navbar a.nav-link {
 nav.navbar a.nav-link:hover,
 nav.navbar a.nav-link.active {
     opacity: 1;
-    text-shadow: 0 0 10px rgba(255,255,255,0.8); /* Glow effect */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
-  
-  /* Optional Navbar Scrolling Effect */
-  nav.navbar.scrolled {
-    padding: 10px 0;
-    background-color: #121212;
-  }
-  
+/* Section Styles */
+section {
+    padding: 60px 20px;
+}
 
-/*Why jacked*/
-  /* Specific for the JACKED section */
-#jacked {
-    padding: 60px; 
-    text-align: center; 
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Start Section (Stopwatch) */
+#start .container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#start .container h3 {
+    margin-bottom: 20px;
+}
+
+#start .container .time {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Sliding Button Effect */
+#start .container button {
+    font-weight: 700;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 18px 34px;
+    font-size: 18px;
+    margin: 10px;
+    position: relative;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+    overflow: hidden; /* Hide overflow from the ::before element */
+}
+
+#start .container button span {
+    z-index: 1; /* Ensure text stays above the sliding background */
+    position: relative;
+}
+
+#start .container button::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    top: 0;
+    z-index: 0; /* Place behind the text */
+    transition: width 0.3s ease-in-out;
+}
+
+#start .container button:hover {
+    color: #121212; /* Change text color on hover */
+}
+
+#start .container button:hover::before {
+    width: 100%; /* Expand the background to full width */
 }
 
 
-/*********Workouts********/
-
-
-
-/*********Footer********/
+/* Footer Styles */
 footer {
-    position: fixed; /* Sticks the footer in a fixed position relative to the viewport */
-    bottom: 0;       /* Aligns it to the bottom */
-    right: 0;        /* Aligns it to the right */
-    padding: 10px;   /* Optional: Adds some padding around the text */
-    text-align: right; /* Aligns the text to the right */
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Optional Media Query for Larger Screens */
+@media (min-width:1700px) {
+    main .container {
+        max-width: 100%;
+        padding: 0 150px;
+    }
 }
