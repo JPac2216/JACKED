@@ -35,6 +35,15 @@ select:focus {
     outline: none;
 }
 
+
+#jacked {
+    padding-top: 100px; 
+}
+
+#jacked h2 {
+    margin-top: 20px; 
+}
+
 /* Navbar Styles */
 nav.navbar {
     padding: 18px 0;
@@ -118,24 +127,25 @@ section p {
 }
 
 #workouts ul {
-    list-style: none;
-    padding-left: 0;
+    list-style: disc; 
+    padding-left: 40px;
     margin-bottom: 20px;
 }
 
 #workouts ul li {
-    background-color: #2c2c2c;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    background-color: transparent; 
+    padding: px 0; 
+    margin-bottom: 5px;
+    border-radius: 0; 
     font-size: 18px;
-    color: #ecf0f1;
+    color: #ecf0f1; 
     position: relative;
+    list-style-position: outside; 
 }
 
 #workouts ul li::before {
     content: "\2022";
-    color: #f39c12;
+    color: #ffffff;
     font-weight: bold;
     position: absolute;
     left: 15px;
