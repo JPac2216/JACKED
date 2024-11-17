@@ -1,3 +1,3 @@
 Jake's branch
 
-Jake Paccione, Matthew Mohamed, Leonard Weber 😎
+Working on index.html and pushing to main
