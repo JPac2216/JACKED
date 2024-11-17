@@ -64,4 +64,24 @@ window.onload = function () {
         appendSeconds.innerHTML = '00';
         appendMinutes.innerHTML = '00'; 
     };
+
+
+    // rep JS code 
+    let reps = 0;
+    document.querySelector('#addRep').onclick = () => {
+        reps++;
+        document.querySelector('#repCount').innerText = reps;
+    };
+
+    // resetRepsButton
+    let resetRepsBtn = document.querySelector('#resetReps');
+    
+    resetRepsBtn.onclick = () => {
+        reps = 0;
+    };
+
+
+
 };
+
+
