@@ -19,7 +19,7 @@
     font-family: 'Centra', sans-serif !important;
   }
   
-  h1, h2, h3, h4, h5, h6{
+  h1, h2{
     margin: 0;
     padding: 0;
     line-height: normal;
@@ -40,11 +40,6 @@
   img {
     width: 100%;
     height: auto;
-  }
-  
-  button {
-    border: 0;
-    background-color: transparent;
   }
   
   input:focus, textarea:focus, select:focus {
@@ -74,4 +69,17 @@
     height: auto; 
     padding: 20px 0;
     text-align: center;
+}
+
+/*********Workouts********/
+
+
+
+/*********Footer********/
+footer {
+    position: fixed; /* Sticks the footer in a fixed position relative to the viewport */
+    bottom: 0;       /* Aligns it to the bottom */
+    right: 0;        /* Aligns it to the right */
+    padding: 10px;   /* Optional: Adds some padding around the text */
+    text-align: right; /* Aligns the text to the right */
 }
