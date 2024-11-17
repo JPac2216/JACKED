@@ -78,7 +78,7 @@ const splits = {
     pull: {
         back: { sets: 0, workouts: 0 },
         biceps: { sets: 0, workouts: 0 },
-        traps: { sets: 0, workouts: 0 },
+        delts: { sets: 0, workouts: 0 },
     },
     legs: {
         quads: { sets: 0, workouts: 0 },
@@ -112,7 +112,7 @@ const renderWorkouts = (splitName) => {
         // Display workout count
         const workoutCount = document.createElement('p');
         workoutCount.id = `${splitName}-${muscle}-workouts`;
-        workoutCount.innerText = `Workouts: ${muscleData.workouts}`;
+        workoutCount.innerText = `Exercises: ${muscleData.workouts}`;
 
         // Add Set Button
         const addSetBtn = document.createElement('button');
