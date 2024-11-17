@@ -29,7 +29,9 @@ img {
     height: auto;
 }
 
-input:focus, textarea:focus, select:focus {
+input:focus,
+textarea:focus,
+select:focus {
     outline: none;
 }
 
@@ -74,6 +76,99 @@ section p {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
+}
+
+/* Workouts Section Styles */
+#workouts {
+    padding: 60px 20px;
+    background-color: #1e1e1e;
+}
+
+#workouts h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#workouts h3 {
+    font-size: 28px;
+    color: #f39c12;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#workouts h4 {
+    font-size: 24px;
+    color: #e67e22;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.push-title {
+    color: #f39c12;
+}
+
+.chest-title {
+    color: #e74c3c;
+}
+
+.triceps-title {
+    color: #9b59b6;
+}
+
+#workouts ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+#workouts ul li {
+    background-color: #2c2c2c;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #ecf0f1;
+    position: relative;
+}
+
+#workouts ul li::before {
+    content: "\2022";
+    color: #f39c12;
+    font-weight: bold;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#workouts ul li span.exercise-name {
+    margin-left: 30px;
+    display: block;
+}
+
+#workouts ul li em {
+    color: #bdc3c7;
+    font-style: normal;
+    margin-left: 30px;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #workouts h2 {
+        font-size: 28px;
+    }
+
+    #workouts h3 {
+        font-size: 24px;
+    }
+
+    #workouts h4 {
+        font-size: 20px;
+    }
 }
 
 /* Start Section (Stopwatch) */
@@ -131,7 +226,6 @@ section p {
     width: 100%;
 }
 
-
 /* Footer Styles */
 footer {
     background-color: #333;
@@ -141,7 +235,7 @@ footer {
 }
 
 /* Optional Media Query for Larger Screens */
-@media (min-width:1700px) {
+@media (min-width: 1700px) {
     main .container {
         max-width: 100%;
         padding: 0 150px;
