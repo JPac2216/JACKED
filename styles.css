@@ -37,7 +37,9 @@ select:focus {
 
 
 #jacked {
+    font-size: 30px;
     padding-top: 100px; 
+    font-family: "Roboto", Courier ;
 }
 
 #jacked h2 {
@@ -96,12 +98,12 @@ section p {
 #workouts h2 {
     text-align: center;
     margin-bottom: 40px;
-    font-size: 32px;
+    font-size: 40px;
     font-weight: bold;
 }
 
 #workouts h3 {
-    font-size: 28px;
+    font-size: 50px;
     text-decoration: underline;
     text-align: center;
     color: #545e89;
@@ -110,7 +112,7 @@ section p {
 }
 
 #workouts h4 {
-    font-size: 24px;
+    font-size: 45px;
     color: #545e89;
     margin-top: 20px;
     margin-bottom: 15px;
@@ -127,7 +129,7 @@ section p {
     padding: px 0; 
     margin-bottom: 5px;
     border-radius: 0; 
-    font-size: 18px;
+    font-size: 30px;
     color: #ecf0f1; 
     position: relative;
     list-style-position: outside; 
