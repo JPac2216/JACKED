@@ -58,12 +58,12 @@
 
         resetBtn.onclick = () => {
             clearInterval(Interval);
-            tens = '00';
-            seconds = '00';
-            minutes = '00';
-            appendTens.innerHTML = tens;
-            appendSeconds.innerHTML = seconds;
-            appendMinutes.innerHTML = minutes; 
+            tens = 0;
+            seconds = 0;
+            minutes = 0;
+            appendTens.innerHTML = '00';
+            appendSeconds.innerHTML = '00';
+            appendMinutes.innerHTML = '00'; 
         };
     };
 
