@@ -102,7 +102,9 @@ section p {
 
 #workouts h3 {
     font-size: 28px;
-    color: #d512f3;
+    text-decoration: underline;
+    text-align: center;
+    color: #7dfff6;
     margin-top: 30px;
     margin-bottom: 20px;
 }
