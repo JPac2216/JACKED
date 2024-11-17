@@ -57,7 +57,7 @@
         };
 
         resetBtn.onclick = () => {
-            clearInterval(Interval)
+            clearInterval(Interval);
             tens = '00';
             seconds = '00';
             minutes = '00';
