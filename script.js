@@ -1,6 +1,6 @@
 // Stopwatch JS code https://www.youtube.com/watch?v=jPFh8kBXoug
-<script>
-    window.onload = function() {
+ <script>
+    window.onload = function () {
         let minutes = 0;
         let seconds = 0; 
         let tens = 00;
@@ -68,4 +68,4 @@
     };
 
 
-</script>
+ </script>
