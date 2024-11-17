@@ -114,6 +114,11 @@ const renderWorkouts = (splitName) => {
         workoutCount.id = `${splitName}-${muscle}-workouts`;
         workoutCount.innerText = `Exercises: ${muscleData.workouts}`;
 
+        // Display totalSet count
+        const totalSetCount = document.createElement('p');
+        totalSetCount.id = `${splitName}-${muscle}-totalSets`;
+        totalSetCount.innerText = `Total Sets: ${muscleData.totalSets}`;
+
         // Add Set Button
         const addSetBtn = document.createElement('button');
         addSetBtn.innerText = `Add Set`;
@@ -134,10 +139,6 @@ const renderWorkouts = (splitName) => {
             document.querySelector(`#${splitName}-${muscle}-totalSets`).innerText = `Total Sets: ${muscleData.totalSets}`; // udates total sets
         };
 
-        // Display totalSet count
-        const totalSetCount = document.createElement('p');
-        totalSetCount.id = `${splitName}-${muscle}-totalSets`;
-        totalSetCount.innerText = `Total Sets: ${muscleData.totalSets}`;
 
         
 
