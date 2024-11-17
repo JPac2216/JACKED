@@ -32,11 +32,7 @@
     line-height: normal;
     text-decoration: none;
   }
-  
-  a:hover {
-    text-decoration: none;
-  }
-  
+
   img {
     width: 100%;
     height: auto;
@@ -70,6 +66,48 @@
     padding: 20px 0;
     text-align: center;
 }
+
+/* Navbar Styles */
+nav.navbar {
+    padding: 18px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    transition: 0.32s ease-in-out;
+    background-color: #333; 
+  }
+  
+  nav.navbar a.navbar-brand {
+      font-size: 1.5rem;
+      color: #fff; 
+      text-decoration: none;
+      font-weight: bold;
+  }
+  
+  nav.navbar .navbar-nav .nav-link {
+    font-weight: 400;
+    color: #fff; 
+    letter-spacing: 0.8px;
+    padding: 0 25px;
+    font-size: 18px;
+    opacity: 0.75; /* Slightly faded */
+    transition: color 0.3s, opacity 0.3s; /* Smooth transition for hover and active */
+  }
+  
+  nav.navbar .navbar-nav .nav-link:hover,
+  nav.navbar .navbar-nav .nav-link.active {
+    color: #f8f8f8; 
+    opacity: 1; 
+  }
+  
+  /* Optional Navbar Scrolling Effect */
+  nav.navbar.scrolled {
+    padding: 10px 0;
+    background-color: #121212;
+  }
+  
+
 
 /*********Workouts********/
 
