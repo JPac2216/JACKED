@@ -113,6 +113,7 @@ section p {
 
 #workouts h4 {
     font-size: 30px;
+    font-family: "Roboto", Monaco ;
     color: #545e89;
     margin-top: 20px;
     margin-bottom: 15px;
@@ -130,6 +131,7 @@ section p {
     margin-bottom: 5px;
     border-radius: 0; 
     font-size: 20px;
+    font-family: "Roboto", Monaco ;
     color: #ecf0f1; 
     position: relative;
     list-style-position: outside; 
@@ -175,12 +177,12 @@ section p {
 }
 
 #start .container .time {
-    font-size: 2em;
+    font-size: 4em;
     margin-bottom: 20px;
 }
 
 /* Sliding Button Effect */
-#stopwatch .container button {
+#stopwatch .sw-container button {
     font-weight: 700;
     color: #fff;
     border: 1px solid #fff;
@@ -193,12 +195,12 @@ section p {
     overflow: hidden;
 }
 
-#stopwatch .container button span {
+#stopwatch .sw-container button span {
     z-index: 1;
     position: relative;
 }
 
-#stopwatch .container button::before {
+#stopwatch .sw-container button::before {
     content: "";
     width: 0%;
     height: 100%;
@@ -210,11 +212,11 @@ section p {
     transition: width 0.3s ease-in-out;
 }
 
-#stopwatch .container button:hover {
+#stopwatch .sw-container button:hover {
     color: #121212;
 }
 
-#stopwatch .container button:hover::before {
+#stopwatch .sw-container button:hover::before {
     width: 100%;
 }
 
@@ -229,7 +231,7 @@ footer {
 
 /* Optional Media Query for Larger Screens */
 @media (min-width: 1700px) {
-    main .container {
+    main .sw-container {
         max-width: 100%;
         padding: 0 150px;
     }
