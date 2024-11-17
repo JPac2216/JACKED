@@ -384,6 +384,31 @@ button:hover::before {
 
 
 
+/* About Us Section */
+#aboutus {
+    padding: 40px 20px; /* Add padding around the section */
+    background-color: #121212; /* Match the site's dark background */
+    text-align: center; /* Center-align all content */
+}
+
+#aboutus h2 {
+    font-size: 2.5em; /* Large and prominent heading */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #fff; /* White text for contrast */
+}
+
+#aboutus p {
+    font-size: 1.0em; /* Increase font size for readability */
+    line-height: 1.8; /* Line spacing for readability */
+    color: #ccc; /* Light gray text */
+    max-width: 800px; /* Limit width for better appearance */
+    margin: 0 auto; /* Center the paragraph horizontally */
+    padding: 0 20px; /* Add horizontal padding */
+}
+
+
+
 
 /* Optional Media Query for Larger Screens */
 @media (min-width: 1700px) {
