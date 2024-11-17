@@ -165,38 +165,62 @@ section p {
     }
 }
 
-/* Start Section (Stopwatch) */
-#start .container {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
+/* Stopwatch Section */
+#stopwatch {
+    padding: 40px 20px; /* Add padding around the section */
+    text-align: center; /* Center-align content */
 }
 
-#start .container h3 {
-    margin-bottom: 20px;
+#stopwatch h2 {
+    font-size: 3em; 
+    font-weight: bold; 
+    margin-bottom: 20px; 
 }
 
-#start .container .time {
-    font-size: 4em;
-    margin-bottom: 20px;
+#stopwatch p {
+    font-size: 1.5em;
+    color: #ccc; 
+    margin-bottom: 30px; 
 }
 
-/* Sliding Button Effect */
+/* Center Time and Buttons */
+#stopwatch .sw-container {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack time and buttons */
+    justify-content: center; /* Vertically align content */
+    align-items: center; /* Horizontally align content */
+    text-align: center; 
+}
+
+#stopwatch .sw-container .time {
+    font-size: 4em; 
+    font-weight: bold; 
+    margin-bottom: 20px; 
+}
+
+/* Button Container */
+#stopwatch .sw-container .buttons {
+    display: flex; 
+    gap: 20px; 
+}
+
+/* Buttons Styling */
 #stopwatch .sw-container button {
     font-weight: 700;
     color: #fff;
     border: 1px solid #fff;
     padding: 18px 34px;
     font-size: 18px;
-    margin: 10px;
+    width: 120px;
     position: relative;
     background-color: transparent;
     transition: 0.3s ease-in-out;
     overflow: hidden;
+    cursor: pointer; 
 }
 
 #stopwatch .sw-container button span {
-    z-index: 1;
+    z-index: 1; 
     position: relative;
 }
 
@@ -219,6 +243,8 @@ section p {
 #stopwatch .sw-container button:hover::before {
     width: 100%;
 }
+
+
 
 /* Footer Styles */
 footer {

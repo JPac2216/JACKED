@@ -57,16 +57,20 @@
                             <li>V-Handle Cable Seated Row | 3 sets, 6-8 reps</li>
                             <li>Machine Row | 3 sets, 6-8 reps</li>
                             <li>Cable Bar Straight Arm Pulldown | 3 sets, 8-10 reps</li>
-                            <li>Machine Rear Delt Reverse Flys | 3 sets, 8-10 reps</li>
                         </ul>
-                        <h4 class="bodypart">Biceps:</h4>
+                    <h4 class="bodypart">Rear Delts / Traps:</h4>    
+                       <ul>
+                            <li>Machine Rear Delt Reverse Flys | 3 sets, 8-10 reps</li>
+                            <li>Dumbbell Shrugs | 3 sets, 12-15 reps</li>
+                       </ul> 
+                    <h4 class="bodypart">Biceps:</h4>
                         <ul>
                             <li>Dumbbell Incline Bicep Curls | 3 sets, 8-10 reps</li>
                             <li>Machine Preacher Curls | 3 sets, 8-10 reps</li>
                             <li>Cable Rope Hammer Curls | 3 sets, 8-10 reps</li>
                         </ul>
                 <h3 class="category">LEGS</h3>
-                    <h4 class="bodypart">Glutes / Hamstrings:</h4>
+                    <h4 class="bodypart">Hamstrings / Glutes:</h4>
                         <ul>
                             <li>Prone Leg Curl Machine | 3 sets, 6-8 reps</li>
                             <li>(Smith) Machine Hip Thrusts | 3 sets, 6-8 reps</li>
@@ -104,10 +108,14 @@
         <!-- Workout Counter -->
         <section id = "track">
             <h2>Track your Workout!</h2>
-            <div class="tr-container">
-                
 
+            <div class="split-buttons">
+                <button onclick="switchSplit('push')">Push</button>
+                <button onclick="switchSplit('pull')">Pull</button>
+                <button onclick="switchSplit('legs')">Legs</button>
             </div>
+
+            <div id="workoutContainer"></div>
         </section>
 
 
