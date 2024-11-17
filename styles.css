@@ -65,4 +65,13 @@
   p.danger {
       color: red;
   }
-  
+
+  /*Header*/
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top */
+    height: auto; 
+    padding: 20px 0;
+    text-align: center;
+}
