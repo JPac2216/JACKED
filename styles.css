@@ -93,7 +93,7 @@ section p {
 }
 
 /* Sliding Button Effect */
-#start .container button {
+#stopwatch .container button {
     font-weight: 700;
     color: #fff;
     border: 1px solid #fff;
@@ -103,15 +103,15 @@ section p {
     position: relative;
     background-color: transparent;
     transition: 0.3s ease-in-out;
-    overflow: hidden; /* Hide overflow from the ::before element */
+    overflow: hidden;
 }
 
-#start .container button span {
-    z-index: 1; /* Ensure text stays above the sliding background */
+#stopwatch .container button span {
+    z-index: 1;
     position: relative;
 }
 
-#start .container button::before {
+#stopwatch .container button::before {
     content: "";
     width: 0%;
     height: 100%;
@@ -119,16 +119,16 @@ section p {
     background-color: #fff;
     left: 0;
     top: 0;
-    z-index: 0; /* Place behind the text */
+    z-index: 0;
     transition: width 0.3s ease-in-out;
 }
 
-#start .container button:hover {
-    color: #121212; /* Change text color on hover */
+#stopwatch .container button:hover {
+    color: #121212;
 }
 
-#start .container button:hover::before {
-    width: 100%; /* Expand the background to full width */
+#stopwatch .container button:hover::before {
+    width: 100%;
 }
 
 
