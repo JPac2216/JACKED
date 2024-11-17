@@ -65,29 +65,7 @@ window.onload = function () {
         appendMinutes.innerHTML = '00'; 
     };
 
-/*
-    // rep JS code 
-    let reps = 0;
-    let repDisplay = document.querySelector('#repCount');
-    let resetRepsBtn = document.querySelector('#resetReps');
 
-
-    const updateRepDisplay = () => {
-        repDisplay.innerText = reps;
-    };
-
-    document.querySelector('#addRep').onclick = () => {
-        reps++;
-        updateRepDisplay();
-    };
-
-    // resetRepsButton
-    resetRepsBtn.onclick = () => {
-        reps = 0;
-        updateRepDisplay();
-    };
-
-*/
 };
 
 // Define workout splits
@@ -146,13 +124,16 @@ const renderWorkouts = (splitName) => {
 
         // Add Workout Button
         const addWorkoutBtn = document.createElement('button');
-        addWorkoutBtn.innerText = `Next Workout`;
+        addWorkoutBtn.innerText = `Next Exercise`;
         addWorkoutBtn.onclick = () => {
             muscleData.workouts++; // Increment workouts
             muscleData.sets = 0; // Reset sets
-            document.querySelector(`#${splitName}-${muscle}-workouts`).innerText = `Workouts: ${muscleData.workouts}`;
+            document.querySelector(`#${splitName}-${muscle}-workouts`).innerText = `Exercise: ${muscleData.workouts}`;
             document.querySelector(`#${splitName}-${muscle}-sets`).innerText = `Sets: ${muscleData.sets}`;
         };
+
+        
+
 
         // Append elements to the workoutDiv
         workoutDiv.appendChild(muscleName);
