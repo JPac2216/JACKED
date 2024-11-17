@@ -74,32 +74,26 @@ nav.navbar {
     width: 100%;
     top: 0;
     z-index: 9999;
-    transition: 0.32s ease-in-out;
-    background-color: #333; 
-  }
-  
-  nav.navbar a.navbar-brand {
-      font-size: 1.5rem;
-      color: #fff; 
-      text-decoration: none;
-      font-weight: bold;
-  }
-  
-  nav.navbar .navbar-nav .nav-link {
-    font-weight: 400;
-    color: #fff; 
-    letter-spacing: 0.8px;
-    padding: 0 25px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+}
+
+nav.navbar a.nav-link {
+    color: #fff;
     font-size: 18px;
-    opacity: 0.75; /* Slightly faded */
-    transition: color 0.3s, opacity 0.3s; /* Smooth transition for hover and active */
-  }
-  
-  nav.navbar .navbar-nav .nav-link:hover,
-  nav.navbar .navbar-nav .nav-link.active {
-    color: #f8f8f8; 
-    opacity: 1; 
-  }
+    padding: 0 25px;
+    text-decoration: none;
+    opacity: 0.75;
+    transition: color 0.3s, opacity 0.3s, text-shadow 0.3s;
+}
+
+nav.navbar a.nav-link:hover,
+nav.navbar a.nav-link.active {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(255,255,255,0.8); /* Glow effect */
+}
+
   
   /* Optional Navbar Scrolling Effect */
   nav.navbar.scrolled {
@@ -111,8 +105,8 @@ nav.navbar {
 /*Why jacked*/
   /* Specific for the JACKED section */
 #jacked {
-    padding: 60px; /* Optional padding for better spacing inside the section */
-    text-align: center; /* Optional: Center-align text */
+    padding: 60px; 
+    text-align: center; 
 }
 
 
