@@ -267,7 +267,6 @@ h2 {
 h4 {
     font-size: 2.5em; /* Large and prominent heading */
     font-weight: bold; /* Bold text */
-    text-align: center; /* Center-align the heading */
     margin-bottom: 5px; /* Space below the heading */
     color: #fff; /* White text for dark background */
 }
