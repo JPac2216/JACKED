@@ -65,7 +65,7 @@ window.onload = function () {
         appendMinutes.innerHTML = '00'; 
     };
 
-
+/*
     // rep JS code 
     let reps = 0;
     let repDisplay = document.querySelector('#repCount');
@@ -87,8 +87,94 @@ window.onload = function () {
         updateRepDisplay();
     };
 
-
-
+*/
 };
+
+// Define workout splits
+const splits = {
+    push: {
+        chest: { sets: 0, workouts: 0 },
+        triceps: { sets: 0, workouts: 0 },
+        shoulders: { sets: 0, workouts: 0 },
+    },
+    pull: {
+        back: { sets: 0, workouts: 0 },
+        biceps: { sets: 0, workouts: 0 },
+        traps: { sets: 0, workouts: 0 },
+    },
+    legs: {
+        quads: { sets: 0, workouts: 0 },
+        hamstrings: { sets: 0, workouts: 0 },
+        calves: { sets: 0, workouts: 0 },
+    },
+};
+
+// Render workouts for a selected split
+const renderWorkouts = (splitName) => {
+    const container = document.querySelector('#workoutContainer');
+    container.innerHTML = ''; // Clear existing content
+
+    const selectedSplit = splits[splitName];
+
+    Object.keys(selectedSplit).forEach((muscle) => {
+        const muscleData = selectedSplit[muscle];
+
+        const workoutDiv = document.createElement('div');
+        workoutDiv.className = 'workout-item';
+
+        // Display muscle name
+        const muscleName = document.createElement('h4');
+        muscleName.innerText = muscle.charAt(0).toUpperCase() + muscle.slice(1);
+
+        // Display set count
+        const setCount = document.createElement('p');
+        setCount.id = `${splitName}-${muscle}-sets`;
+        setCount.innerText = `Sets: ${muscleData.sets}`;
+
+        // Display workout count
+        const workoutCount = document.createElement('p');
+        workoutCount.id = `${splitName}-${muscle}-workouts`;
+        workoutCount.innerText = `Workouts: ${muscleData.workouts}`;
+
+        // Add Set Button
+        const addSetBtn = document.createElement('button');
+        addSetBtn.innerText = `Add Set`;
+        addSetBtn.onclick = () => {
+            muscleData.sets++; // Increment sets
+            document.querySelector(`#${splitName}-${muscle}-sets`).innerText = `Sets: ${muscleData.sets}`;
+        };
+
+        // Add Workout Button
+        const addWorkoutBtn = document.createElement('button');
+        addWorkoutBtn.innerText = `Next Workout`;
+        addWorkoutBtn.onclick = () => {
+            muscleData.workouts++; // Increment workouts
+            muscleData.sets = 0; // Reset sets
+            document.querySelector(`#${splitName}-${muscle}-workouts`).innerText = `Workouts: ${muscleData.workouts}`;
+            document.querySelector(`#${splitName}-${muscle}-sets`).innerText = `Sets: ${muscleData.sets}`;
+        };
+
+        // Append elements to the workoutDiv
+        workoutDiv.appendChild(muscleName);
+        workoutDiv.appendChild(setCount);
+        workoutDiv.appendChild(workoutCount);
+        workoutDiv.appendChild(addSetBtn);
+        workoutDiv.appendChild(addWorkoutBtn);
+
+        // Add to container
+        container.appendChild(workoutDiv);
+    });
+};
+
+// Initialize the UI with default split
+window.onload = () => {
+    renderWorkouts('push'); // Render Push split by default
+};
+
+// Switch between splits
+const switchSplit = (splitName) => {
+    renderWorkouts(splitName);
+};
+
 
 
