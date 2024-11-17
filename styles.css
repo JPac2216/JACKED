@@ -108,6 +108,13 @@ nav.navbar {
   }
   
 
+/*Why jacked*/
+  /* Specific for the JACKED section */
+#jacked {
+    padding: 60px; /* Optional padding for better spacing inside the section */
+    text-align: center; /* Optional: Center-align text */
+}
+
 
 /*********Workouts********/
 
