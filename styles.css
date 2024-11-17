@@ -409,6 +409,39 @@ button:hover::before {
 }
 
 
+/* Individual Person Section */
+#aboutus .person {
+    margin-bottom: 60px; /* Space between persons */
+}
+
+#aboutus .person h3 {
+    font-size: 2em; /* Heading size for names */
+    color: #fff; /* White text for contrast */
+    margin-bottom: 20px; /* Space below the name */
+}
+
+#aboutus .person .images {
+    display: flex; /* Arrange images in a row */
+    justify-content: center; /* Center images horizontally */
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+    gap: 20px; /* Space between images */
+}
+
+#aboutus .person .images img {
+    width: 300px; /* Set image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    object-fit: cover; /* Ensure the image covers the container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #aboutus .person .images img {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 300px; /* Limit maximum width */
+    }
+}
 
 
 /* Optional Media Query for Larger Screens */
