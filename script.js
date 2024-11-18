@@ -1,72 +1,56 @@
 // Stopwatch JS code https://www.youtube.com/watch?v=jPFh8kBXoug
 window.onload = function () {
-    let minutes = 0;
-    let seconds = 0; 
-    let tens = 0;
+    let startTime = 0;
+    let elapsedTime = 0;
+    let interval;
 
-    let appendMinutes = document.querySelector('#minutes');
-    let appendTens = document.querySelector('#tens');
-    let appendSeconds = document.querySelector('#seconds');
+    const appendMinutes = document.querySelector('#minutes');
+    const appendSeconds = document.querySelector('#seconds');
+    const appendTens = document.querySelector('#tens');
 
-    let startBtn = document.querySelector('#start');
-    let stopBtn = document.querySelector('#stop');
-    let resetBtn = document.querySelector('#reset');
+    const startBtn = document.querySelector('#start');
+    const stopBtn = document.querySelector('#stop');
+    const resetBtn = document.querySelector('#reset');
 
+    const updateTimer = () => {
+        elapsedTime = Date.now() - startTime;
 
-    let Interval;
-    const startTimer = () => {
-        tens++; 
-        if (tens <= 9){
-            appendTens.innerHTML = '0' + tens;
-        }
+        // Calculate time components
+        const totalSeconds = Math.floor(elapsedTime / 1000);
+        const tens = Math.floor((elapsedTime % 1000) / 10);
+        const seconds = totalSeconds % 60;
+        const minutes = Math.floor(totalSeconds / 60);
 
-        if (tens > 9){
-            appendTens.innerHTML = tens;
-        }
-
-        if (tens > 99){
-            seconds++;
-            appendSeconds.innerHTML = '0' + seconds;
-            tens = 0;
-            appendTens.innerHTML = '0' + 0;
-        }
-
-        if (seconds > 9){
-            appendSeconds.innerHTML = seconds;
-        }
-
-        if  (seconds > 59){
-            minutes++;
-            appendMinutes.innerHTML = '0' + minutes;
-            seconds = 0;
-            appendSeconds.innerHTML = '0' +0;
-
-        }
+        // Update the display
+        appendMinutes.innerHTML = minutes.toString().padStart(2, '0');
+        appendSeconds.innerHTML = seconds.toString().padStart(2, '0');
+        appendTens.innerHTML = tens.toString().padStart(2, '0');
     };
 
-
-
-    startBtn.onclick= () => {
-        clearInterval(Interval);
-        Interval = setInterval(startTimer, 10);
+    startBtn.onclick = () => {
+        if (!interval) {
+            startTime = Date.now() - elapsedTime; // Preserve elapsed time when resuming
+            interval = setInterval(updateTimer, 10); // Update every 10ms
+        }
     };
 
     stopBtn.onclick = () => {
-        clearInterval(Interval);
+        clearInterval(interval);
+        interval = null;
     };
 
     resetBtn.onclick = () => {
-        clearInterval(Interval);
-        tens = 0;
-        seconds = 0;
-        minutes = 0;
-        appendTens.innerHTML = '00';
+        clearInterval(interval);
+        interval = null;
+        elapsedTime = 0;
+        appendMinutes.innerHTML = '00';
         appendSeconds.innerHTML = '00';
-        appendMinutes.innerHTML = '00'; 
+        appendTens.innerHTML = '00';
     };
 
     renderWorkouts('push');
 };
+
 
 // Define workout splits
 const splits = {
