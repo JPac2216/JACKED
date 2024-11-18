@@ -389,7 +389,7 @@ button:hover::before {
 #aboutus {
     padding: 40px 20px; /* Add padding around the section */
     background-color: #121212; /* Match the site's dark background */
-    text-align: center; /* Center-align all content */
+    text-align: left; /* Center-align all content */
 }
 
 #aboutus h2 {
@@ -400,7 +400,7 @@ button:hover::before {
 }
 
 #aboutus p {
-    font-size: 1.0em; /* Increase font size for readability */
+    font-size: 1em; /* Increase font size for readability */
     line-height: 1.8; /* Line spacing for readability */
     color: #ccc; /* Light gray text */
     max-width: 800px; /* Limit width for better appearance */
@@ -408,31 +408,38 @@ button:hover::before {
     padding: 0 20px; /* Add horizontal padding */
 }
 
+/* Container for the horizontal layout */
+#aboutus .person-container {
+    display: flex; /* Enable flexbox for horizontal layout */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between items */
+    flex-wrap: wrap; /* Wrap items to the next line if needed on smaller screens */
+}
 
 /* Individual Person Section */
 #aboutus .person {
-    margin-bottom: 60px; /* Space between persons */
+    text-align: center; /* Center align the text and image */
+    width: 300px; /* Set a fixed width for consistency */
 }
 
 #aboutus .person h3 {
-    font-size: 2em; /* Heading size for names */
+    font-size: 1.5em; /* Heading size for names */
     color: #fff; /* White text for contrast */
-    margin-bottom: 20px; /* Space below the name */
-}
-
-#aboutus .person .images {
-    display: flex; /* Arrange images in a row */
-    justify-content: center; /* Center images horizontally */
-    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
-    gap: 20px; /* Space between images */
+    margin-bottom: 10px; /* Space below the name */
 }
 
 #aboutus .person .images img {
-    width: 300px; /* Set image width */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; /* Full width within the container */
     border-radius: 10px; /* Rounded corners */
     object-fit: cover; /* Ensure the image covers the container */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #aboutus .person-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
 }
 
 /* Responsive Design */
