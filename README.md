@@ -16,13 +16,13 @@ Visit the homepage and explore the available features by navigating through the 
 
 ## Screenshots
 
-###Homepage
+### Homepage
 ![Homepage Screenshot](images/homepage.png)
 
-###Stopwatch Feature
+### Stopwatch Feature
 ![Stopwatch Screenshot](images/stopwatch.png)
 
-###Workout Tracker
+### Workout Tracker
 ![Tracker Screenshot](images/tracker.png)
 
 ## Roadmap
