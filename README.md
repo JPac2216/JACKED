@@ -27,6 +27,7 @@ Visit the homepage and explore the available features by navigating through the 
 
 ## Roadmap
 - **Exercise Tutorials**: Embed videos demonstrating how to perform exercises correctly.
+- **Data Storage**: Enable users to have accounts on the website and save user data.
 - **Data Export**: Enable users to download workout data, including total time, sets, and exercises, for personal tracking.
 - **Progress Sharing**: Allow users to email/upload their progress pictures, which can be featured on the website.
 
